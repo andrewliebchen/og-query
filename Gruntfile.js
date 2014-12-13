@@ -73,29 +73,9 @@ module.exports = function (grunt) {
         files: [{
           dot: true,
           src: [
-            'index.html',
             'assets/'
           ]
         }]
-      }
-    },
-
-    sass: {
-      dist: {
-        options: {
-          style: 'compressed',
-          sourcemap: 'none'
-        },
-        files: {
-          'src/styles/reacticons.css': 'src/styles/reacticons.scss'
-        }
-      }
-    },
-
-    autoprefixer: {
-      dist: {
-        src: 'src/styles/reacticons.css',
-        dest: 'src/styles/reacticons.css'
       }
     }
   });
@@ -113,7 +93,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', ['karma']);
 
-  grunt.registerTask('build', ['clean', 'webpack', 'sass:dist', 'autoprefixer:dist']);
+  grunt.registerTask('build', ['clean', 'webpack']);
 
   grunt.registerTask('default', []);
 };

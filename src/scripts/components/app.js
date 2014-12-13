@@ -14,7 +14,7 @@ var Entity = React.createClass({
   render: function() {
     return (
       <select>
-        <option>City of Palo Alto</option>
+        <option>City of Palo Alto, CA</option>
       </select>
     );
   }

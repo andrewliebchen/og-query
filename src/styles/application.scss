@@ -4,6 +4,13 @@ $color-primary: #1c6bd2;
 $color-primary-light: #f7f9fa;
 $color-primary-dark: #030a43;
 
+* {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  box-sizing: border-box;
+}
+
 html,
 body {
   background-color: $color-primary;
@@ -33,9 +40,6 @@ body {
 }
 
 select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
   background-color: transparent;
   border-radius: 0;
   border: 0;
@@ -54,6 +58,22 @@ select {
   }
 }
 
+button {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid $color-primary-light;
+  display: block;
+  font-weight: bold;
+  line-height: 2em + 0.1em;
+  margin: 1.5em auto;
+  padding: 0 2em;
+
+  &:hover {
+    background-color: white;
+    color: $color-primary;
+  }
+}
+
 .athena-frame {
   border: 0;
   height: 95vh;
@@ -66,7 +86,7 @@ select {
 
 .athena-frame-enter {
   transform: translateY(100%);
-  transition: transform 0.5s ease-in-out 0.1s ;
+  transition: transform 0.5s ease-in-out 0.1s;
 }
 
 .athena-frame-enter.athena-frame-enter-active {
